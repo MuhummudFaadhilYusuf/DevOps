@@ -1,8 +1,52 @@
-<h2>Sign up</h2>
+<h2>Sign Up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
+  </div> 
+
+  <%= f.fields_for :user_profile do |user_profile_form|%>
+  
+    <%= user_profile_form.label :age %><br />
+    <%= user_profile_form.number_field :age, autofocus: true, autocomplete: "age" %>
+    <p>
+    <%= user_profile_form.label :location %><br />
+    <%= user_profile_form.text_field :location, autofocus: true, autocomplete: "location" %></p>
+    <p>
+    <%= user_profile_form.label :mobile_number %><br />
+    <%= user_profile_form.text_field :mobile_number, autofocus: true, autocomplete: "mobile_number" %></p>
+    <p>
+    <%= user_profile_form.label :user_tag %><br />
+    <%= user_profile_form.text_field :user_tag, autofocus: true, autocomplete: "user_tag" %></p>
+
+    <%= user_profile_form.hidden_field :user_id, value: current_user.id %>
+<% end %>
+
+<%= f.fields_for :address do |address_form|%>
+
+    <%= address_form.label :address1 %><br />
+    <%= address_form.text_field :address1, autofocus: true, autocomplete: "address1" %>
+    <p>
+    <%= address_form.label :address2 %><br />
+    <%= address_form.text_field :address2, autofocus: true, autocomplete: "address2" %></p>
+    <p>
+    <%= address_form.label :city %><br />
+    <%= address_form.text_field :city, autofocus: true, autocomplete: "city" %> </p>
+    <p>
+    <%= address_form.label :postcode %><br />
+    <%= address_form.text_field :postcode, autofocus: true, autocomplete: "postcode" %></p>
+
+    <%= address_form.hidden_field :user_id, value: current_user.id %>
+<% end %>
+  
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
