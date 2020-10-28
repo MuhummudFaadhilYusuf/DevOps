@@ -12,24 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :age %>
+    <%= form.label :age %><br>
     <%= form.number_field :age %>
-  </div>
+  </div><br>
 
   <div class="field">
-    <%= form.label :location %>
+    <%= form.label :location %><br>
     <%= form.text_area :location %>
-  </div>
+  </div><br>
 
   <div class="field">
-    <%= form.label :mobile_number %>
+    <%= form.label :mobile_number %><br>
     <%= form.text_field :mobile_number %>
-  </div>
+  </div><br>
 
   <div class="field">
-    <%= form.label :user_tag %>
+    <%= form.label :user_tag %><br>
     <%= form.text_area :user_tag %>
-  </div>
+  </div><br>
 
   <div class="field">
     <%= form.hidden_field :user_id, value: current_user.id %>

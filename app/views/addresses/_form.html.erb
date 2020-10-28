@@ -12,24 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :address1 %>
+    <%= form.label :address1 %><br>
     <%= form.text_area :address1 %>
-  </div>
+  </div><br>
 
   <div class="field">
-    <%= form.label :address2 %>
+    <%= form.label :address2 %><br>
     <%= form.text_area :address2 %>
-  </div>
+  </div><br>
 
   <div class="field">
-    <%= form.label :city %>
+    <%= form.label :city %><br>
     <%= form.text_field :city %>
-  </div>
+  </div><br>
 
   <div class="field">
-    <%= form.label :postcode %>
+    <%= form.label :postcode %><br>
     <%= form.text_field :postcode %>
-  </div>
+  </div><br>
 
   <div class="field">
     <%= form.hidden_field :user_id, value: current_user.id %>

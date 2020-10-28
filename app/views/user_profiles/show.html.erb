@@ -1,29 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Age:</strong>
+<p align="center">
+  <strong>Age:</strong><br>
   <%= @user_profile.age %>
 </p>
 
-<p>
-  <strong>Location:</strong>
+<p align="center">
+  <strong>Location:</strong><br>
   <%= @user_profile.location %>
 </p>
 
-<p>
-  <strong>Mobile number:</strong>
+<p align="center">
+  <strong>Mobile number:</strong><br>
   <%= @user_profile.mobile_number %>
 </p>
 
-<p>
-  <strong>User tag:</strong>
+<p align="center">
+  <strong>User tag:</strong><br>
   <%= @user_profile.user_tag %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @user_profile.user_id %>
-</p>
 
-<%= link_to 'Edit', edit_user_profile_path(@user_profile) %> |
-<%= link_to 'Back', user_profiles_path %>
+<div class="center">
+  <%= link_to 'Edit', edit_user_profile_path(@user_profile) %> |
+  <%= link_to 'Back', user_profiles_path %>
+</div>
